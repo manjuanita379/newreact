@@ -1,0 +1,21 @@
+service: my-typescript-lambda
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: dist/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+package:
+  individually: true
+
+custom:
+  webpack:
+    webpackConfig: './webpack.config.js'
+    includeModules: true
+

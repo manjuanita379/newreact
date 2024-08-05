@@ -1,0 +1,153 @@
+{
+  "/root/reactjs": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.19",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "aws": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "my-typescript-lambda",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "hello": {
+                "handler": "dist/handler.hello",
+                "events": [
+                  {
+                    "http": {
+                      "path": "hello",
+                      "method": "get"
+                    }
+                  }
+                ]
+              }
+            },
+            "package": {
+              "individually": true
+            },
+            "plugins": [
+              "serverless-plugin-typescript"
+            ],
+            "custom": {
+              "webpack": {
+                "webpackConfig": "./webpack.config.js",
+                "includeModules": true
+              }
+            }
+          },
+          "configFileDirPath": "/root/reactjs",
+          "config": {
+            "type": "aws"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "isDefaultConfig": true
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/root/reactjs",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-typescript-lambda",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "hello": {
+          "handler": "dist/handler.hello",
+          "events": [
+            {
+              "http": {
+                "path": "hello",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      },
+      "package": {
+        "individually": true
+      },
+      "plugins": [
+        "serverless-plugin-typescript"
+      ],
+      "custom": {
+        "webpack": {
+          "webpackConfig": "./webpack.config.js",
+          "includeModules": true
+        }
+      }
+    },
+    "serviceRawFile": "service: my-typescript-lambda\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nfunctions:\n  hello:\n    handler: dist/handler.hello\n    events:\n      - http:\n          path: hello\n          method: get\n\npackage:\n  individually: true\n\nplugins:\n  - serverless-plugin-typescript\n\ncustom:\n  webpack:\n    webpackConfig: './webpack.config.js'\n    includeModules: true\n\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless plugin \"serverless-plugin-typescript\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-plugin-typescript\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:854:2669)\n    at async PluginManager.loadAllPlugins (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:854:1293)\n    at async Serverless.init (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:861:9760)\n    at async runFramework (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:909:880)\n    at async route (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:920:16304)\n    at async Object.run2 [as run] (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:920:16702)\n    at async run3 (file:///root/.serverless/releases/4.1.19/package/dist/sf-core.js:920:17962)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "4bb1a17e015ae118d43e5985a1260949",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "02f16870-7250-4305-9bc9-cd0b96b5ccc6",
+    "orgName": "anchu333",
+    "userId": "nNTRF1sdymPPs3WPjV",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "anchu333",
+    "subscription": null,
+    "userEmail": "anchu333@rediffmail.com",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "684848412987",
+    "versionSf": "4.1.19",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:684848412987:stack/simple-lambda-service-dev/0fd903a0-5334-11ef-a4ca-128d7fa7f2e1",
+    "serviceProviderAwsCfStackCreated": "2024-08-05T14:07:34.168Z",
+    "serviceProviderAwsCfStackUpdated": "2024-08-05T14:07:55.978Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "HelloLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:684848412987:function:simple-lambda-service-dev-hello:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-simple-lambda-service-dev-HelloLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://lqutieavr4.execute-api.us-east-1.amazonaws.com/dev",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-simple-lambda-service-dev-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "simple-lambda-service-dev-serverlessdeploymentbuck-h6kcs1ywr1h9",
+        "ExportName": "sls-simple-lambda-service-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}
